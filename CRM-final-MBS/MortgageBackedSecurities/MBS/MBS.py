@@ -20,6 +20,7 @@ class MBS(object):
         self.refinanccost = refinanccost
 
 
+
     def getPrepayment(self):
         self.datelist
         #from the datelist find out all the dates that are the end of month
@@ -45,12 +46,19 @@ class MBS(object):
         monthpay = self.principle*self.mortrate*n/(n-1)
         for date in schedule:
             cashflow[date] = monthpay
-            UPB[date] = self.principle - sum(UPB[:date])
+            UPB[date] = self.principle # how to calculate the remaining principle
         return self.cashflow
 
     def getCashFlow(self):
         # update cashflow based on prepayment rate
         for date in prepay:
+            if prepay[date] != 0:
+                cashflow[date] = cashflow[date] +　prepay[date]*UPB[date-1]
+                UPB[date] = self.principle
+        
+    
+    
+        
 
 
 
