@@ -12,11 +12,12 @@ class MBS(object):
         self.ntimes = len(self.datelistlong)
         self.prepay = []
         self.cashflow = []
+        self.UPB = [] #unpaid balance
+        # these three dataframes' datelist are monthly based, instead of daily
         self.principle = principle
         self.mortrate = mortrate
         self.maturity = maturity
         self.refinanccost = refinanccost
-        self.UPB = [] #unpaid balance
 
 
     def getPrepayment(self):
