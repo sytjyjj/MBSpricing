@@ -11,7 +11,7 @@ Topic: Mortgate Backed Securities Pricing
     In reality, prepayment depends on various factors like refinancing rates and costs, weighted average lify of the loans in the pool, the seasoning factors etc. But the research on the prepayment would be a huge topic, so we decide to simplify our project by solely deciding the prepayment on the movement of interets rates and refianncing cost.
 
 ###Methodology:
-The general structure of our project is :
+    The general structure of our project is :
 1.	Simulate the evolution of short term interest rates using Vasicek model 
 2.	Using interest rates term structure to model prepayment due to refinancing and adjust cash flows on each path
 3.  Embedded default risk into the discouting process of cash flows 
